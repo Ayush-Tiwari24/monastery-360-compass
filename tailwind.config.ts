@@ -47,6 +47,13 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        monastery: {
+          red: "hsl(var(--monastery-red))",
+          gold: "hsl(var(--monastery-gold))",
+          saffron: "hsl(var(--monastery-saffron))",
+          stone: "hsl(var(--monastery-stone))",
+          earth: "hsl(var(--monastery-earth))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -57,6 +64,16 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      backgroundImage: {
+        'gradient-hero': 'var(--gradient-hero)',
+        'gradient-card': 'var(--gradient-card)',
+        'gradient-mountain': 'var(--gradient-mountain)',
+      },
+      boxShadow: {
+        'monastery': 'var(--shadow-monastery)',
+        'card-custom': 'var(--shadow-card)',
+        'elevation': 'var(--shadow-elevation)',
       },
       borderRadius: {
         lg: "var(--radius)",
