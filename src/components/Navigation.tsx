@@ -1,17 +1,18 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navigationItems = [
-    { name: "Home", href: "#home" },
-    { name: "Virtual Tours", href: "#tours" },
-    { name: "Festivals", href: "#festivals" },
-    { name: "Culture", href: "#culture" },
-    { name: "Community", href: "#community" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "Virtual Tours", href: "/virtual-tours" },
+    { name: "Festivals", href: "/festivals" },
+    { name: "Culture", href: "/culture" },
+    { name: "Community", href: "/community" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -29,14 +30,14 @@ export const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navigationItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className="text-foreground hover:text-primary transition-colors duration-200 relative group"
               >
                 {item.name}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -65,14 +66,14 @@ export const Navigation = () => {
           <div className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col space-y-4">
               {navigationItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   className="text-foreground hover:text-primary transition-colors duration-200 py-2"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
               <Button variant="default" className="bg-gradient-hero mt-4 w-full">
                 Start Virtual Journey
