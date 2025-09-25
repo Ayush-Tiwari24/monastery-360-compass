@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Play, Eye, VolumeX, Volume2, Maximize, Download, ArrowLeft, Filter } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import InteractiveMap from "@/components/InteractiveMap";
 
 const VirtualTours = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -155,6 +156,17 @@ const VirtualTours = () => {
               Download All
             </Button>
           </div>
+        </div>
+
+        {/* Interactive Map Section */}
+        <div className="mb-16">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold mb-4">Explore Monastery Locations</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Discover monasteries across Sikkim with our interactive map. Click on markers to learn more about each sacred location and start virtual tours.
+            </p>
+          </div>
+          <InteractiveMap />
         </div>
 
         {/* Tour Grid */}
